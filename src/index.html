@@ -4,14 +4,166 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@200;300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+
 		<link rel="stylesheet" href="css/main.min.css" />
-		<script src="js/main.min.js"></script>
+
+		<script src="js/main.min.js" defer></script>
 
 		<title>Signup</title>
 	</head>
 	<body>
-		
-		
-		</div>
+		<main class="main">
+			<div class="overlay-signup">
+				<div class="signup">
+					<div class="signup__wrapper">
+						<aside class="signup__sidebar sidebar">
+							<h1 class="sidebar__title">Sign up</h1>
+						</aside>
+
+						<div class="signup__form-block form-block">
+							<h2 class="form-block__title">New user?</h2>
+							<span class="form-block__text"
+								>Use the form below to create your account.</span
+							>
+							<form class="signup__form form">
+								<div class="form__input-group">
+									<div class="form__wrapper">
+										<label for="firsname" class="form__title">First Name</label>
+										<input
+											type="text"
+											id="firsname"
+											placeholder="Your first name"
+											class="form__input"
+										/>
+									</div>
+									<!-- /.form__wrapper -->
+
+									<div class="form__wrapper">
+										<label for="lastname" class="form__title">Last Name</label>
+										<input
+											type="text"
+											id="lastname"
+											placeholder="Your last name"
+											class="form__input"
+										/>
+									</div>
+									<!-- /.form__wrapper -->
+
+									<div class="form__wrapper">
+										<div class="form__title">Nationality</div>
+										<select
+											name="dropdown"
+											id="nationality"
+											class="form__input form__input-nation"
+										></select>
+									</div>
+									<!-- /.form__wrapper -->
+
+									<div class="form__wrapper">
+										<label for="email" class="form__title">E-mail</label>
+										<input
+											type="text"
+											id="email"
+											placeholder="Your mail"
+											class="form__input"
+										/>
+									</div>
+									<!-- /.form__wrapper -->
+
+									<div class="form__wrapper">
+										<div class="form__title">Date of Birth</div>
+										<div class="form__list dropdown-list">
+											<select
+												name="days[]"
+												class="form__input dropdown-list__day"
+											></select>
+											<select
+												name="mounth[]"
+												class="form__input dropdown-list__mounth"
+											></select>
+
+											<select
+												id="year"
+												name="year[]"
+												class="form__input dropdown-list__year"
+											></select>
+										</div>
+										<!-- /.form__list dropdown-list -->
+									</div>
+									<!-- /.form__wrapper -->
+
+									<div class="form__wrapper" d>
+										<div class="form__title">Gender</div>
+										<div class="form__group">
+											<input
+												type="radio"
+												name="gender"
+												id="male"
+												value="male"
+												class="form__radio-btn"
+											/>
+											<label for="male" class="form__radio-title">Male</label>
+											<input
+												type="radio"
+												name="gender"
+												id="female"
+												value="female"
+												class="form__radio-btn"
+											/>
+											<label for="female">Female</label>
+										</div>
+										<!-- /.form__group-two-->
+									</div>
+									<!-- /.form__wrapper -->
+
+									<div class="form__wrapper">
+										<label for="password" class="form__title">Password</label>
+										<input type="password" id="password" class="form__input" />
+									</div>
+									<!-- /.form__wrapper -->
+
+									<div class="form__wrapper">
+										<label for="passwordcon" class="form__title"
+											>Confirm Password</label
+										>
+										<input
+											type="password"
+											id="passwordcon"
+											class="form__input"
+										/>
+									</div>
+									<!-- /.form__wrapper -->
+								</div>
+								<!-- /.form__input-group -->
+
+								<div class="form__linkbtn">
+									<span class="form__linktext">
+										Have an account? <a href="#" class="form__link">Login</a>
+									</span>
+									<button type="submit" class="form__btn">
+										Complete Signup
+									</button>
+								</div>
+								<!-- /.form__linkbtn -->
+							</form>
+						</div>
+						<!-- /.signup__form-block -->
+						<div class="signup__img">
+							<img src="/img/shape.svg" alt="" />
+						</div>
+						<!-- /.signup__img -->
+					</div>
+					<!-- /.signup__wrapper -->
+				</div>
+				<!-- /.signup -->
+			</div>
+			<!-- /.overlay -->
+		</main>
 	</body>
 </html>

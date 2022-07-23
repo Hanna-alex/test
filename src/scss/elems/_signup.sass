@@ -1,0 +1,150 @@
+.overlay-signup
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: 100
+
+.signup
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 665px
+  max-height: 100%
+  z-index: 101
+  background-color: $white-color
+  filter: drop-shadow(0px 12px 82px rgba(0, 0, 0, 0.2))
+  &__wrapper
+    display: flex
+    position: relative
+    background: src('../img/')
+  &__img
+    position: absolute
+    right: 0
+    bottom: 0
+    z-index: -1
+
+//стили для сайдбара
+.sidebar
+  display: flex
+  justify-content: flex-end
+  width: 138px
+  height: 480px
+  background-color: $bg-blue-color
+  padding: 22.5px 6.5px
+  &__title
+    font-family: 'PT Sans', sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 49px
+    line-height: 62px
+    letter-spacing: 0.5px
+    color: $white-color
+    writing-mode: vertical-rl
+    transform: rotate(-180deg)
+
+//стили бля блока с формой
+.form-block
+  display: flex
+  flex-direction: column
+  font-weight: 500
+  width: 527px
+  min-height: 480px
+  padding: 38.52px 22px 32.48px 20.8px
+  &__title
+    font-size: 22px
+    line-height: 26px
+    letter-spacing: -1.46px
+  &__text
+    font-weight: 300
+    line-height: 16px
+    display: block
+    margin-bottom: 20px
+
+  //стили для формы
+.form
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &__input-group
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    line-height: 16
+  &__wrapper
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 235px
+    height: 42px
+    margin-bottom: 16px
+    &:nth-child(2n)
+      width: 237px
+  &__title
+    font-weight: 300
+    font-size: 12px
+    line-height: 14px
+    color: $grey
+  &__input
+    line-height: 16px
+    border: none
+    border-bottom: 0.7px solid #F2F2F2
+    background-color: transparent
+    padding: 4px 15px 6px 0
+    &:focus
+      outline: none
+      border-bottom: 0.7px solid $bg-blue-color
+    &:hover
+      border-bottom-color: $main-color
+  &__input-nation
+    background-color: transparent
+  &__group
+    display: flex
+    align-items: center
+    height: 27px
+    line-height: 16px
+    font-weight: 400
+  &__radio-btn
+    width: 12px
+    height: 12px
+    margin-right: 6px
+  &__radio-title
+    margin-right: 19px
+  &__linkbtn
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: 32px
+  &__linktext
+    font-weight: 200
+  &__link
+    color: $bg-blue-color
+    font-weight: 300
+
+  &__btn
+    font-family: 'PT Sans', sans-serif
+    font-style: normal
+    font-weight: 400
+    ont-size: 14px
+    line-height: 18px
+    outline: none
+    background: $bg-blue-color
+    border: 0.5px solid $white-color
+    color: $white-color
+    padding: 7px 26px
+
+.dropdown-list
+  display: flex
+  justify-content: space-between
+  &__day
+    width: 56px
+  &__mounth
+    width: 91px
+  &__year
+    width: 68px
+  &__hidden
+    display: none

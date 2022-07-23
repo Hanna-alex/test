@@ -24,7 +24,7 @@ const paths = {
     dest: 'dist/'
   },
   style: {
-    src: ['src/scss/**/*.sass', 'src/scss/**/*.scss'],
+    src: ['src/scss/**/*.sass', 'src/scss/*.scss'],
     dest: 'dist/css',
   },
   scripts: {
@@ -60,10 +60,14 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-      cascade: false
+      cascade: false,
+      overrideBrowserslist: ['last 3 versions'],
+      flex: true,
+      grid: true
     }))
     .pipe(cleanCSS({
-      level: 2
+      level: 2,
+
     }))
     .pipe(remane({
       basename: 'main',
@@ -114,7 +118,7 @@ function watch() {
       baseDir: "./dist/"
     }
   })
-  gulp.watch(paths.html.dest).on('change', browsersync.reload)
+  gulp.watch(paths.html.src).on('change', browsersync.reload)
   gulp.watch(paths.html.src, html)
   gulp.watch(paths.style.src, styles)
   gulp.watch(paths.scripts.src, scripts)
